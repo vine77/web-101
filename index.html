@@ -22,21 +22,206 @@
       <h3>
 <a id="welcome-to-web-101" class="anchor" href="#welcome-to-web-101" aria-hidden="true"><span class="octicon octicon-link"></span></a>Welcome to Web 101</h3>
 
-<p>This mini-course will help you get started with learning HTML and CSS to create webpages and progress to JavaScript and Ember to create web applications.</p>
+<p>This mini-course will help you get started learning HTML and CSS to create webpages and JavaScript and Ember to create web applications.</p>
+
+<h3>
+<a id="get-started-with-the-command-line" class="anchor" href="#get-started-with-the-command-line" aria-hidden="true"><span class="octicon octicon-link"></span></a>Get started with the command line</h3>
+
+<p>To get started, you should learn the basics of running commands with Terminal, which will be used for everything from installing apps to running a local server to saving code in a repository.</p>
+
+<ul>
+<li>Article: <a href="http://blog.teamtreehouse.com/introduction-to-the-mac-os-x-command-line">Introduction to the Mac OS X Command Line (Treehouse)</a>
+</li>
+<li>
+<p>Note: In this document, commands to be run in Terminal will be formatted like this:</p>
+
+<pre><code>echo "Hello world"
+</code></pre>
+</li>
+<li><p>Make sure to learn basic commands like <code>cd</code> (change directory), <code>ls</code> (list directory contents), <code>pwd</code> (print working directory), and <code>man</code> (display manual)</p></li>
+<li>Learn the difference between absolute vs. relative paths</li>
+<li>Get comfortable with directory shorthands <code>~</code> (home directory), <code>/</code> (root directory), <code>..</code> (one directory up), and <code>.</code> (current directory)</li>
+</ul>
 
 <h3>
 <a id="prerequisites-on-mac-os-x" class="anchor" href="#prerequisites-on-mac-os-x" aria-hidden="true"><span class="octicon octicon-link"></span></a>Prerequisites on Mac OS X</h3>
 
 <ol>
-<li><a href="http://brew.sh">Install homebrew</a></li>
-<li><a href="http://git-scm.com/download/">Install git</a></li>
+<li>
+<p>Install programs from the command line:</p>
+
+<ol>
+<li>
+<p>Install homebrew:</p>
+
+<pre><code>ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+</code></pre>
+</li>
+<li>
+<p>Install Node.js:</p>
+
+<pre><code>brew install node
+</code></pre>
+</li>
+<li>
+<p>Install git:</p>
+
+<pre><code>brew install git
+</code></pre>
+</li>
+<li>
+<p>Install Ember CLI:</p>
+
+<pre><code>npm install -g ember-cli
+</code></pre>
+</li>
+<li>
+<p>Enable color:</p>
+
+<pre><code>git config --global color.ui true; echo "export CLICOLOR=1; export LSCOLORS=GxFxCxDxBxegedabagaced;" &gt;&gt; ~/.bash_profile &amp;&amp; source ~/.bash_profile
+</code></pre>
+</li>
+</ol>
+</li>
+<li>
+<p>Get started with Github, where we will be storing the code for your projects</p>
+
+<ol>
 <li><a href="https://github.com">Create a GitHub account</a></li>
-<li><a href="https://help.github.com/articles/set-up-git/">Set up git</a></li>
+<li>
+<p>Tell git your name and email:</p>
+
+<pre><code>git config --global user.name "YOUR NAME"
+</code></pre>
+
+<pre><code>git config --global user.email "YOUR EMAIL ADDRESS"
+</code></pre>
+</li>
+</ol>
+</li>
+<li>
+<p>Install a text editor</p>
+
+<ol>
 <li><a href="http://www.sublimetext.com/3">Install Sublime Text</a></li>
 <li><a href="https://packagecontrol.io/installation">Install Package Control for Sublime Text</a></li>
-<li><a href="https://github.com/daaain/Handlebars#installation">Install Handlebars package for Sublime Text</a></li>
-<li><a href="http://www.ember-cli.com/">Install Ember CLI</a></li>
+<li><a href="https://github.com/daaain/Handlebars#installation">Install the Handlebars package for Sublime Text</a></li>
+<li>
+<p>Set up the <code>subl</code> shortcut by running the following command in Terminal (which will allow you to open or create files with commands like <code>subl README</code> or open the current directory with <code>subl .</code>):</p>
+
+<pre><code>ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /usr/local/bin/subl
+</code></pre>
+</li>
 </ol>
+</li>
+</ol>
+
+<p><strong>Pro Tip</strong>: Install <a href="https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi">Ember Inspector</a> for Google Chrome or <a href="https://addons.mozilla.org/en-us/firefox/addon/ember-inspector/">Ember Inspector</a> for Mozilla Firefox.</p>
+
+<h3>
+<a id="your-first-app" class="anchor" href="#your-first-app" aria-hidden="true"><span class="octicon octicon-link"></span></a>Your first app</h3>
+
+<ol>
+<li>
+<p>Open Terminal and go to your home directory:</p>
+
+<pre><code>cd ~
+</code></pre>
+</li>
+<li>
+<p>Generate an Ember app called <em>hello-world</em>:</p>
+
+<pre><code>ember new hello-world
+</code></pre>
+
+<ul>
+<li>
+<strong>Note</strong>: This will generate all the basic files necessary in a new <code>hello-world</code> directory and initialize it as a git repository</li>
+</ul>
+</li>
+<li>
+<p>Go to your new project directory:</p>
+
+<pre><code>cd ~/hello-world
+</code></pre>
+
+<ul>
+<li>
+<strong>Note</strong>: Subsequent <code>ember</code> and <code>git</code> commands need to be run here, inside your project directory</li>
+</ul>
+</li>
+<li>
+<p>Open your project in Sublime Text to see the files and folders generated for you:</p>
+
+<pre><code>subl .
+</code></pre>
+
+<ul>
+<li>
+<strong>Note</strong>: The main files for your application are inside the <code>app</code> directory</li>
+</ul>
+</li>
+<li>
+<p>Start a local web server:</p>
+
+<pre><code>ember serve
+</code></pre>
+
+<ul>
+<li>
+<strong>Note</strong>: the server will only keep running as long as that Terminal window is open or until you press <code>control-c</code>
+</li>
+</ul>
+</li>
+<li><p>Open <code>http://localhost:4200</code> in Chrome to see the Ember app live</p></li>
+<li>Open the application template in Sublime Text, located at <code>app/templates/application.hbs</code>
+</li>
+<li>Replace "Welcome to Ember.js" with something like "Hello world!" and save the file</li>
+<li>Go back to your web browser and notice that the page has been automatically reloaded with your changes since the Ember server noticed that you saved the file</li>
+<li>Open the CSS file located at <code>app/styles/app.css</code> and add <code>* { color: green; }</code> to change all color green</li>
+<li>Congratulations on creating your first web application! Feel free to play around with putting more HTML in <code>app/templates/application.hbs</code> and more CSS in <code>app/styles/app.css</code>
+</li>
+<li>
+<p>To double check what files you modified, run:</p>
+
+<pre><code>git status
+</code></pre>
+</li>
+<li>
+<p>To see the modified lines of code, run:</p>
+
+<pre><code>git diff
+</code></pre>
+</li>
+<li>
+<p>Tell git which files you want to save:</p>
+
+<pre><code>git add app
+</code></pre>
+
+<ul>
+<li>
+<strong>Note</strong>: This is called "staging" files</li>
+</ul>
+</li>
+<li>
+<p>Save these files by committing them to the repository, with a message:</p>
+
+<pre><code>git commit -m "Modified application"
+</code></pre>
+</li>
+<li>
+<p>Check the log of commits in your repository:</p>
+
+<pre><code>git log
+</code></pre>
+</li>
+</ol>
+
+<h3>
+<a id="assignment-1" class="anchor" href="#assignment-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Assignment 1</h3>
+
+<p>Coming soon...</p>
 
       <footer class="site-footer">
         <span class="site-footer-owner"><a href="https://github.com/vine77/web-101">Web 101</a> is maintained by <a href="https://github.com/vine77">vine77</a>.</span>
