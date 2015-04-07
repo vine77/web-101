@@ -75,13 +75,19 @@ To get started, you should learn the basics of running commands with Terminal, w
 
 ### Your first app
 
-1. Open Terminal and go to your home directory:
+1. Open Terminal and create a directory for your repositories:
 
     ```
-    cd ~
+    mkdir ~/repos
     ```
 
-2. Generate an Ember app called _hello-world_:
+2. Go into your new repositories directory:
+
+    ```
+    cd ~/repos
+    ```
+
+3. Generate an Ember app called _hello-world_:
 
     ```
     ember new hello-world
@@ -89,15 +95,15 @@ To get started, you should learn the basics of running commands with Terminal, w
 
     * **Note**: This will generate all the basic files necessary in a new `hello-world` directory and initialize it as a git repository
 
-3. Go to your new project directory:
+4. Go to your new project directory:
 
     ```
-    cd ~/hello-world
+    cd ~/repos/hello-world
     ```
 
     * **Note**: Subsequent `ember` and `git` commands need to be run here, inside your project directory
 
-4. Open your project in Sublime Text to see the files and folders generated for you:
+5. Open your project in Sublime Text to see the files and folders generated for you:
 
     ```
     subl .
@@ -105,7 +111,7 @@ To get started, you should learn the basics of running commands with Terminal, w
 
     * **Note**: The main files for your application are inside the `app` directory
 
-5. Start a local web server:
+6. Start a local web server:
 
     ```
     ember serve
@@ -113,39 +119,39 @@ To get started, you should learn the basics of running commands with Terminal, w
 
     * **Note**: the server will only keep running as long as that Terminal window is open or until you press `control-c`
 
-6. Open `http://localhost:4200` in Chrome to see the Ember app live
-7. Open the application template in Sublime Text, located at `app/templates/application.hbs`
-8. Replace "Welcome to Ember.js" with something like "Hello world!" and save the file
-9. Go back to your web browser and notice that the page has been automatically reloaded with your changes since the Ember server noticed that you saved the file
-10. Open the CSS file located at `app/styles/app.css` and add `* { color: green; }` to change all color green
-11. Congratulations on creating your first web application! Feel free to play around with putting more HTML in `app/templates/application.hbs` and more CSS in `app/styles/app.css`
-12. To double check what files you modified, run:
+7. Open `http://localhost:4200` in web browser to see the Ember app live
+8. Open the application template in Sublime Text, located at `app/templates/application.hbs`
+9. Replace "Welcome to Ember.js" with something like "Hello world!" and save the file
+10. Go back to your web browser and notice that the page has been automatically reloaded with your changes since the Ember server noticed that you saved the file
+11. Open the CSS file located at `app/styles/app.css` and add something like `* { color: green; }` to change all color green
+12. Congratulations on creating your first web application! Feel free to play around with putting more HTML in `app/templates/application.hbs` and more CSS in `app/styles/app.css`
+13. To double check what files you modified, run:
 
     ```
     git status
     ```
 
-13. To see the modified lines of code, run:
+14. To see the modified lines of code, run:
 
     ```
     git diff
     ```
 
-14. Tell git which files you want to save:
+15. Tell git which files you want to save (we'll save any changes in the app directory):
 
     ```
     git add app
     ```
 
-    * **Note**: This is called "staging" files
+    * **Note**: People often phrase this step as "staging" files, as in adding them to a staging area where they are on deck to be committed to the repository.
 
-15. Save these files by committing them to the repository, with a message:
+16. Save these files by committing them to the repository, with a message:
 
     ```
     git commit -m "Modified application"
     ```
 
-16. Check the log of commits in your repository:
+17. Check the log of commits in your repository:
 
     ```
     git log
@@ -153,4 +159,12 @@ To get started, you should learn the basics of running commands with Terminal, w
 
 ### Assignment 1
 
-Coming soon...
+Objective: Create a web application with Ember and publish it to GitHub
+
+Extra Credit: Add a photo to your GitHub profile
+
+1. Follow the steps from [Your first app](#your-first-app), which creates a local repository on your computer for your project. You might want to call it something like "assignment-1" instead of "hello-world".
+2. Create a new repository on GitHub (with the "+" icon in the upper-right), ideally using the same name as your Ember app.
+3. Publish your local repository to GitHub's remote repository by following GitHub's instructions that pop up to "push an _existing_ repository from the command line".
+4. Refresh your web browser to see the updates. This is your project's homepage on GitHub and you should be able to see your code online!
+5. Send me the link to your project's homepage.
