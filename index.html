@@ -123,9 +123,15 @@
 
 <ol>
 <li>
-<p>Open Terminal and go to your home directory:</p>
+<p>Open Terminal and create a directory for your repositories:</p>
 
-<pre><code>cd ~
+<pre><code>mkdir ~/repos
+</code></pre>
+</li>
+<li>
+<p>Go into your new repositories directory:</p>
+
+<pre><code>cd ~/repos
 </code></pre>
 </li>
 <li>
@@ -142,7 +148,7 @@
 <li>
 <p>Go to your new project directory:</p>
 
-<pre><code>cd ~/hello-world
+<pre><code>cd ~/repos/hello-world
 </code></pre>
 
 <ul>
@@ -173,12 +179,12 @@
 </li>
 </ul>
 </li>
-<li><p>Open <code>http://localhost:4200</code> in Chrome to see the Ember app live</p></li>
+<li><p>Open <code>http://localhost:4200</code> in web browser to see the Ember app live</p></li>
 <li>Open the application template in Sublime Text, located at <code>app/templates/application.hbs</code>
 </li>
 <li>Replace "Welcome to Ember.js" with something like "Hello world!" and save the file</li>
 <li>Go back to your web browser and notice that the page has been automatically reloaded with your changes since the Ember server noticed that you saved the file</li>
-<li>Open the CSS file located at <code>app/styles/app.css</code> and add <code>* { color: green; }</code> to change all color green</li>
+<li>Open the CSS file located at <code>app/styles/app.css</code> and add something like <code>* { color: green; }</code> to change all color green</li>
 <li>Congratulations on creating your first web application! Feel free to play around with putting more HTML in <code>app/templates/application.hbs</code> and more CSS in <code>app/styles/app.css</code>
 </li>
 <li>
@@ -194,14 +200,14 @@
 </code></pre>
 </li>
 <li>
-<p>Tell git which files you want to save:</p>
+<p>Tell git which files you want to save (we'll save any changes in the app directory):</p>
 
 <pre><code>git add app
 </code></pre>
 
 <ul>
 <li>
-<strong>Note</strong>: This is called "staging" files</li>
+<strong>Note</strong>: People often phrase this step as "staging" files, as in adding them to a staging area where they are on deck to be committed to the repository.</li>
 </ul>
 </li>
 <li>
@@ -221,7 +227,17 @@
 <h3>
 <a id="assignment-1" class="anchor" href="#assignment-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Assignment 1</h3>
 
-<p>Coming soon...</p>
+<p>Objective: Create a web application with Ember and publish it to GitHub</p>
+
+<p>Extra Credit: Add a photo to your GitHub profile</p>
+
+<ol>
+<li>Follow the steps from <a href="#your-first-app">Your first app</a>, which creates a local repository on your computer for your project.</li>
+<li>Create a new repository on GitHub (with the "+" icon in the upper-left), ideally using the same name as your Ember app.</li>
+<li>Publish your local repository to GitHub's remote repository by following GitHub's instructions that pop up to "push an <em>existing</em> repository from the command line".</li>
+<li>Refresh your web browser to see the updates. This is your project's homepage on GitHub and you should be able to see your code online!</li>
+<li>Send me the link to your project's homepage.</li>
+</ol>
 
       <footer class="site-footer">
         <span class="site-footer-owner"><a href="https://github.com/vine77/web-101">Web 101</a> is maintained by <a href="https://github.com/vine77">vine77</a>.</span>
